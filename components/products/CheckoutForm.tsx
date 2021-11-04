@@ -1,7 +1,6 @@
 import React from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { ProductCard } from "./ProductCard";
-import styled from "styled-components";
 
 export const CheckoutForm = () => {
   const stripe = useStripe();
@@ -24,16 +23,16 @@ export const CheckoutForm = () => {
     console.log(paymentMethod);
   };
   return (
-    <Form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit}>
       <ProductCard />
       <CardElement />
       <button type="submit">buy</button>
-    </Form>
+    </form>
   );
 };
 
-const Form = styled.form`
-  width: 50%;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-`;
+// const Form = styled.form`
+//   width: 50%;
+//   border: 1px solid #aaa;
+//   border-radius: 10px;
+// `;
