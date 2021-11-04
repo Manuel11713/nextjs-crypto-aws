@@ -1,0 +1,5 @@
+.iconContainer {
+  position: absolute;
+  padding: calc(var(--basePadding));
+  left: 0;
+}

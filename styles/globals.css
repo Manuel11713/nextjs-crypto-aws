@@ -1,3 +1,5 @@
+@import url("./overrides.css");
+
 html,
 body {
   padding: 0;
@@ -16,6 +18,6 @@ a {
 }
 
 :root {
-  --secondary-color: red;
-  --third-color: blue;
+  --primaryColor: #2196f3;
+  --basePadding: 1.5rem;
 }

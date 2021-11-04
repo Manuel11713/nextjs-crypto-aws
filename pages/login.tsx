@@ -1,30 +1,25 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import { useState } from "react";
 import { LoginForm, SignUpForm } from "components/inputs";
 import { useUser } from "providers";
-import { navigate } from "gatsby-link";
+import { useRouter } from "next/router";
+import { ButtonBack } from "components/elements";
 
 const Login = () => {
   const [showLogin, setShowLoign] = useState(true);
   const { user } = useUser();
-  if (user) navigate("/");
+  const router = useRouter();
+  if (user) router.push("/");
   return (
-    <LoginStyles>
+    <div>
+      <ButtonBack />
+
       {showLogin ? (
         <LoginForm setShowLoign={setShowLoign} />
       ) : (
         <SignUpForm setShowLoign={setShowLoign} />
       )}
-    </LoginStyles>
+    </div>
   );
 };
 
 export default Login;
-
-const LoginStyles = styled.div`
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  background: #ececec;
-  padding: 50px;
-`;

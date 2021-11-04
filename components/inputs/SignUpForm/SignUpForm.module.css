@@ -1,0 +1,13 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--basePadding);
+}
+.linkBack {
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+
+.datePicker {
+  margin-bottom: 16px;
+}
